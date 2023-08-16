@@ -1,6 +1,6 @@
-# [XXX]
+# My blog application
 
-....
+Using Ruby on Rails for this project for the first time
 
 <a name="readme-top"></a>
 
@@ -29,13 +29,13 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [XXX]  <a name="about-project"></a>
+# 📖 blog app  <a name="about-project"></a>
 
-.....
+Here you can create your own blog and have you own user accounts!
 
 ## 🛠 Built With <a name="built-with"></a>
 
-The site was built with Ruby
+The site was built with Ruby on Rails and PostgreSQL
 
 ### Tech Stack <a name="tech-stack"></a>
 
@@ -43,6 +43,8 @@ The site was built with Ruby
 <summary>Database</summary>
   <ul>
     <li><a href="https://www.ruby-lang.org/en/">Ruby</a></li>
+    <li><a href="https://rubyonrails.org/">Ruby on Rails</a></li>
+    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
   </ul>
 </details>
 
@@ -50,8 +52,9 @@ The site was built with Ruby
 
 ### Key Features <a name="key-features"></a>
 
-- Module and class for the application 
-- Ruby linters
+- Database
+- Ror linters
+- Migration
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- LIVE DEMO -->
@@ -67,7 +70,7 @@ To get a local copy up and running, follow these steps.
 In order to run this project you need:
 
 > - [Git](https://www.linode.com/docs/guides/how-to-install-git-on-linux-mac-and-windows/)
-> - [Ruby](https://github.com/microverseinc/curriculum-ruby/blob/main/simple-ruby/articles/ruby_installation_instructions.md)
+> - [RubyonRails](https://github.com/microverseinc/curriculum-rails/blob/main/blog-app/lessons/RoR_setup_lesson_v1_1.md)
 > - IDE
 > - Etc
 
@@ -78,7 +81,7 @@ Clone this repository to your desired folder:
 ```sh
   cd my-folder
 
-  git clone git@github.com:enmanuelbayen/[XXXXXX]........
+  git clone git@github.com:enmanuelbayen/blog-app.git
 ```
 
 
@@ -87,7 +90,7 @@ Clone this repository to your desired folder:
 Install this project with:
 
 ```sh
-  cd FILE-NAME HERE.....
+  cd blog-app
 
     bundle install
 ```
@@ -136,7 +139,7 @@ To run tests, run the following command:
 
 Contributions, issues, and feature requests are welcome! Will help me a lot to improve my coding skills.
 
-Feel free to check the [issues page](https://github.com/enmanuelbayen/FILE-NAME-HERE/issues)
+Feel free to check the [issues page](https://github.com/enmanuelbayen/blog-app/issues)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
