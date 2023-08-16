@@ -6,16 +6,16 @@ default: &default
 development:
   <<: *default
   database: noteapp_development
-  username: eclipton
-  password: 1234
+  username: testing
+  password: testing
   port: 5432
   host: localhost
 
 test:
   <<: *default
   database: noteapp_test
-  username: eclipton
-  password: 1234
+  username: testing
+  password: testing
   port: 5432
   host: localhost
 
