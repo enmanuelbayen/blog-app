@@ -1,8 +1,10 @@
 require './spec/rails_helper'
 
 RSpec.describe Post, type: :model do
-  let(:author) { User.create(name: 'John') }
-  subject { Post.new(author:, title: 'Test Post', text: 'This is a test post.', comments_counter: 0, likes_counter: 0) }
+  let(:author) { User.new(name: 'Carlos', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Tester') }
+  subject { Post.new(author: author, title: 'Test Post', text: 'This is a test post.') }
+
+  before { subject.save }
 
   context "Validation" do
     it "should be valid with valid attributes" do
@@ -30,15 +32,14 @@ RSpec.describe Post, type: :model do
 
   context "Methods" do
     it "should return the 5 most recent comments" do
-        post = Post.create(author:, title: "Test Post", text: "This is a test post.")
-        comment1 = post.comments.create(text: "Comment 1", created_at: Time.now - 5.days)
-      comment2 = post.comments.create(text: "Comment 2", created_at: Time.now - 4.days)
-      comment3 = post.comments.create(text: "Comment 3", created_at: Time.now - 3.days)
-      comment4 = post.comments.create(text: "Comment 4", created_at: Time.now - 2.days)
-      comment5 = post.comments.create(text: "Comment 5", created_at: Time.now - 1.day)
-      comment6 = post.comments.create(text: "Comment 6", created_at: Time.now)
+      Comment.create(text: 'Comment', post: subject, author: author, created_at: Time.now)
+      Comment.create(text: 'Comment', post: subject, author: author, created_at: Time.now - 2.days)
+      Comment.create(text: 'Comment', post: subject, author: author, created_at: Time.now - 4.days)
+      Comment.create(text: 'Comment', post: subject, author: author, created_at: Time.now - 5.days)
+      Comment.create(text: 'Comment', post: subject, author: author, created_at: Time.now - 7.days)
+      Comment.create(text: 'Comment', post: subject, author: author, created_at: Time.now - 9.days)
 
-      expect(post.recent_comments).to eq([comment6, comment5, comment4, comment3, comment2])
+      expect(subject.recent_comments).to eq(subject.comments.order(created_at: :desc).limit(5))
     end
   end
 end

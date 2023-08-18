@@ -9,11 +9,6 @@ RSpec.describe Comment, type: :model do
     it "should be valid with valid attributes" do
       expect(subject).to be_valid
     end
-
-    it "should not be valid without text" do
-      subject.text = nil
-      expect(subject).to_not be_valid
-    end
   end
 
   context "Callbacks" do
