@@ -1,5 +1,5 @@
-SELECT * FROM users;
--- SELECT * FROM posts;
+-- SELECT * FROM users;
+SELECT * FROM posts;
 -- SELECT * FROM comments;
 -- user = User.create(name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Mexico.')
 -- user = User.create(name: 'Larry', photo: 'https://unsplash.com/es/fotos/WE6A_jLpZwQ', bio: 'Teacher from Wars.')
