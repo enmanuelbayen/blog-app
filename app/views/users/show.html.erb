@@ -1,1 +1,13 @@
-<h1>Users/show</h1>
+<section class="post-section flex">
+  <%= render partial: 'shared/user_banner', locals: { user: @user } %>
+  <div class="user-bio">
+    <h3>Bio</h3>
+    <p><%= @user.bio %></p>
+  </div>
+  <%= render partial: 'shared/recent_posts', collection: @user.recent_posts, as: :post %>
+  <div class="bttn-box">
+    <button class="expand-bttn">
+      <%= link_to 'See all posts', user_posts_path(@user) %>
+    </button>
+  </div>
+</section>
