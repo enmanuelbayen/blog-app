@@ -131,8 +131,29 @@ h2 {
 
 .comment-list {
   flex-direction: column;
-  gap: .5em;
+  gap: 0.5em;
   border: 3px solid black;
   padding: 1%;
   margin-top: 4px;
+}
+
+/* post show comments */
+
+.post-counter-show {
+  font-size: 0.8rem;
+}
+
+.post-card-show {
+  border: 3px solid black;
+  padding: 1%;
+}
+
+.post-card-show h3 {
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+
+.post-title {
+  justify-content: space-between;
+  margin-bottom: 5px;
 }

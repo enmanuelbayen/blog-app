@@ -1,2 +1,18 @@
-<h1>Posts/show</h1>
+<section class="comment-section">
+    <div class="post-card-show">
+    <% user = User.find(@post.author_id) %>
+        <div class="post-title flex">
+            <h3 class=""><%= @post.title %> by <%= user.name %></h3>
+            <p class="post-counter-show">Comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counter %></p>
+        </div>
+        <p><%= @post.text %></p>
+    </div>
+    <ul class="comment-list flex">
+        <% @post.comments.each do |comment| %>
+            <li>
+                <p><%= comment.author.name %>: <%= comment.text %></p>
+            </li>
+        <% end %>
+    </ul>
+</section>
 
