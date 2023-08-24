@@ -1,13 +1,3 @@
-<ul class="user-list flex">
-  <% @users.each do |user| %>
-    <%= link_to user_path(user) do %>
-      <li class="user-item grid">
-        <img class="user-img" src="<%=user.photo%>" alt"<%=user.name%>" />
-        <div class="user-box flex" >
-          <h2 class="user-name"><%=user.name%></h2>
-          <p class="user-post-count">Numbers of posts: <%=user.posts_counter%></p>
-        </div>
-      </li>
-    <% end %>
-  <% end %>
-</ul>
+<section class="user-list flex">
+  <%= render partial: 'shared/user_banner', collection: @users, as: :user %>
+</section>
