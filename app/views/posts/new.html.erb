@@ -1,6 +1,6 @@
 <h1 class="create-title">Create a Post</h1>
 
-<%= form_with model: @post, url: new_user_post_path, method: :post do |f| %>
+<%= form_with model: @post, url: user_posts_path, method: :post, scope: :post do |f| %>
     <div class="form-input flex">
         <div>
             <%= f.label :title %>
