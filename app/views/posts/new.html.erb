@@ -1,0 +1,14 @@
+<h1 class="create-title">Create a Post</h1>
+
+<%= form_with model: @post, url: user_posts_path, method: :post, scope: :post do |f| %>
+    <div class="form-input flex">
+        <div>
+            <%= f.label :title %>
+            <%= f.text_field :title %>
+        </div>
+        <div>
+            <%= f.text_area :text, rows: 5, cols: 40, placeholder: 'Text' %>
+        </div>
+        <%= f.submit "Create Post", class: "form-bttn" %>
+    </div>
+<% end %>
