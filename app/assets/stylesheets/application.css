@@ -157,3 +157,30 @@ h2 {
   justify-content: space-between;
   margin-bottom: 5px;
 }
+
+/* create post form page */
+
+.create-title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bolder;
+  margin-bottom: 2rem;
+}
+
+.form-input {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+
+.form-input textarea {
+  
+}
+
+.form-bttn {
+  background-color: transparent;
+  border: 3px solid black;
+  padding: 1% 2.5%;
+  cursor: pointer;
+}

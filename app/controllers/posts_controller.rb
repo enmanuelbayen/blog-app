@@ -8,4 +8,11 @@ class PostsController < ApplicationController
     @post = Post.find_by(id: params[:id])
     @comments = Comment.where(post_id: params[:id])
   end
+
+  def new
+    @post = Post.new
+  end
+
+  def create
+  end
 end
