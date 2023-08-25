@@ -163,7 +163,7 @@ h2 {
   margin-bottom: 5px;
 }
 
-/* form style for post and comments*/
+/* form style for post and comments */
 
 .create-title {
   text-align: center;
@@ -190,5 +190,5 @@ h2 {
   font-size: 1em;
   background-color: transparent;
   border: 2px solid black;
-  padding: .2em;
+  padding: 0.2em;
 }
