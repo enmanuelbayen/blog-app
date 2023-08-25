@@ -1,4 +1,4 @@
-<section class="comment-section">
+<section class="comment-section flex">
     <div class="post-card-show">
     <% user = User.find(@post.author_id) %>
         <div class="post-title flex">
@@ -14,5 +14,8 @@
             </li>
         <% end %>
     </ul>
+    <div class="bttn-box">
+      <a class="expand-bttn" href="<%= new_user_post_comment_path(@user, @post) %>">Add comment</a>
+    </div>
 </section>
 

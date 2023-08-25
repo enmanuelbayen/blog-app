@@ -13,3 +13,8 @@ SELECT * FROM posts;
 --    Comment.create(post: user6_post1, author: user1, text: 'comment x post 1' )
 --    Comment.create(post: user6_post2, author: user2, text: 'comment y post 2' )
 --    Comment.create(post: user6_post3, author: user3, text: 'comment z post 3' )
+<div class="bttn-box">
+<button class="expand-bttn">
+<%= link_to 'Go back', user_posts_path(@user) %>
+</button>
+</div>

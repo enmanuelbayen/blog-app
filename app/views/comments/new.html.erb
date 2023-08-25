@@ -1,0 +1,11 @@
+<h1 class="create-title">Create a comment</h1>
+
+<%= form_with model: @comment, url: user_post_comments_path, method: :post, scope: :comment do |f| %>
+    <div class="form-input flex">
+        <div>
+            <%= f.label :text %>
+            <%= f.text_area :text, rows: 5, cols: 40, placeholder: 'Text' %>
+        </div>
+        <%= f.submit "Create comment", class: "form-bttn" %>
+    </div>
+<% end %>
