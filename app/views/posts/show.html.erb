@@ -2,7 +2,7 @@
     <div class="post-card-show">
     <% user = User.find(@post.author_id) %>
         <div class="post-title flex">
-            <h3 class=""><%= @post.title %> by <%= user.name %></h3>
+            <h3 class=""><%= @post.title %> by <%= user.name %>   <%= render partial: 'likes/likes_form' %></h3>
             <p class="post-counter-show">Comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counter %></p>
         </div>
         <p><%= @post.text %></p>
@@ -16,6 +16,9 @@
     </ul>
     <div class="bttn-box">
       <a class="expand-bttn" href="<%= new_user_post_comment_path(@user, @post) %>">Add comment</a>
+    </div>
+    <div class="bttn-box">
+      <a class="" href="<%= user_posts_path(@user) %>">Go back</a>
     </div>
 </section>
 
