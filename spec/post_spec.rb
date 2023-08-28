@@ -39,7 +39,7 @@ RSpec.describe Post, type: :model do
       Comment.create(text: 'Comment', post: subject, author:, created_at: Time.now - 7.days)
       Comment.create(text: 'Comment', post: subject, author:, created_at: Time.now - 9.days)
 
-      expect(subject.recent_comments).to eq(subject.comments.order(created_at: :desc).limit(5))
+      expect(subject.recent_comments).to eq(subject.comments.order(created_at: :asc).limit(5))
     end
   end
 end
