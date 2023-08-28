@@ -1,5 +1,6 @@
 <div class="post-card">
-  <h3>Post #<%= post.id %></h3>
+  <h3>Post: <%= post.title %></h3>
   <p><%= post.text %></p>
+  <%= link_to "See post >", user_post_path(@user, post.id), class: "see-post" %>
   <p class="post-counter">Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %></p>
 </div>
