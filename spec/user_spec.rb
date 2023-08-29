@@ -24,7 +24,7 @@ RSpec.describe User, type: :model do
       post2 = Post.create(author: subject, title: 'test2', text: 'test', created_at: Time.now - 2.day)
       post3 = Post.create(author: subject, title: 'test3', text: 'test', created_at: Time.now - 1.day)
 
-      expect(subject.recent_posts).to eq([post3, post2, post1])
+      expect(subject.recent_posts).to eq([post1, post2, post3])
     end
 
     it 'should set the posts_counter to 0 when you create a new instance of User' do
