@@ -192,3 +192,34 @@ h2 {
   border: 2px solid black;
   padding: 0.2em;
 }
+
+
+/* User login/confirmation/sign up */
+
+.log-in-box {
+  flex-direction: column;
+  text-align: center;
+  gap: .4rem;
+}
+
+.new_user {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: .3rem;
+}
+
+.field-box {
+  border: 3px solid black;
+  padding: .3em 0;
+  width: 100%;
+  background-color: transparent;
+}
+
+.actions-bttn {
+  border: 3px solid black;
+  padding: 3px 6px;
+  width: 100%;
+  background-color: transparent;
+}
