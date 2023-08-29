@@ -4,11 +4,11 @@ RSpec.describe 'users/index', type: :system do
   describe 'index page' do
     let!(:user1) do
       User.create(name: 'Carlos Montana', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'teacher from venezuela',
-      posts_counter: 10)
+                  posts_counter: 10)
     end
     let!(:user2) do
       User.create(name: 'Jhon Wick', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'teacher from venezuela/caracas',
-      posts_counter: 0)
+                  posts_counter: 0)
     end
 
     before do
@@ -20,7 +20,7 @@ RSpec.describe 'users/index', type: :system do
       expect(page).to have_selector('h2', text: 'Jhon Wick')
 
       expect(page).to have_selector('.user-img[src="https://unsplash.com/photos/F_-0BxGuVvo"]', count: 2)
-      
+
       expect(page).to have_selector('.user-post-count', text: 'Numbers of posts: 10', count: 1)
       expect(page).to have_selector('.user-post-count', text: 'Numbers of posts: 0', count: 1)
     end
@@ -33,4 +33,3 @@ RSpec.describe 'users/index', type: :system do
     end
   end
 end
-

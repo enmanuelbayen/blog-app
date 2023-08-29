@@ -4,23 +4,23 @@ RSpec.describe 'posts/show.html.erb', type: :system do
   describe 'index page' do
     let!(:user) do
       User.create(name: 'carlos', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'teacher from vzla',
-      posts_counter: 10)
+                  posts_counter: 10)
     end
     let!(:commenter) do
       User.create(name: 'pete', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'teacher from vzla caracas',
-      posts_counter: 0)
+                  posts_counter: 0)
     end
     let!(:post) do
       Post.create(title: 'Post Title', text: 'Post Text', author: user)
     end
     let!(:comment1) do
-      Comment.create(author: commenter, post: post, text: 'comment 1')
+      Comment.create(author: commenter, post:, text: 'comment 1')
     end
     let!(:comment2) do
-      Comment.create(author: commenter, post: post, text: 'comment 2')
+      Comment.create(author: commenter, post:, text: 'comment 2')
     end
     let!(:comment3) do
-      Comment.create(author: commenter, post: post, text: 'comment 3')
+      Comment.create(author: commenter, post:, text: 'comment 3')
     end
     before do
       visit user_post_path(user, post)

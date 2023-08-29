@@ -55,4 +55,3 @@ RSpec.describe 'users/show', type: :system do
     end
   end
 end
-
