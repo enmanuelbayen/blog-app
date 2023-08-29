@@ -199,7 +199,7 @@ h2 {
 .log-in-box {
   flex-direction: column;
   text-align: center;
-  gap: .4rem;
+  gap: 0.4rem;
 }
 
 .new_user {
@@ -207,12 +207,12 @@ h2 {
   display: flex;
   flex-direction: column;
   text-align: center;
-  gap: .3rem;
+  gap: 0.3rem;
 }
 
 .field-box {
   border: 3px solid black;
-  padding: .3em 0;
+  padding: 0.3em 0;
   width: 100%;
   background-color: transparent;
 }
