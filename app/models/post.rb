@@ -9,6 +9,10 @@ class Post < ApplicationRecord
 
   after_create :update_posts_counter
 
+  def decrement_posts_counter
+    author.decrement!(:posts_counter)
+  end
+
   def update_posts_counter
     author.update(posts_counter: author.posts.count)
   end
