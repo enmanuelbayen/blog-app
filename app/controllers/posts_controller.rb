@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  load_and_authorize_resource
+
   def index
     @user = User.find_by(id: params[:user_id])
     @posts = Post.where(author_id: params[:user_id]).includes(:comments, :author)
@@ -24,6 +26,12 @@ class PostsController < ApplicationController
       flash.now[:error] = 'Failed to create the post.'
       render :new
     end
+  end
+
+  def destroy
+    @post = Post.find(params[:id])
+    @post.decrement_posts_counter
+    @post.destroy
   end
 
   private
