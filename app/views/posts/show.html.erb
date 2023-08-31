@@ -6,11 +6,18 @@
             <p class="post-counter-show">Comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counter %></p>
         </div>
         <p><%= @post.text %></p>
+
+        <% if can? :destroy, @post %>
+            <%= link_to 'Delete', user_post_path(@post.author_id, @post), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+        <% end %>
     </div>
     <ul class="comment-list flex">
         <% @post.comments.each do |comment| %>
             <li>
                 <p><%= comment.author.name %>: <%= comment.text %></p>
+                <% if can? :destroy, comment %>
+                    <%= link_to 'Delete', user_post_comment_path(@user, @post, comment), method: :delete, 'data-turbo-method': :delete %>
+                <% end %>
             </li>
         <% end %>
     </ul>

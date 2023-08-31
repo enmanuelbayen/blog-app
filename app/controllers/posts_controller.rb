@@ -21,7 +21,7 @@ class PostsController < ApplicationController
     @post = current_user.posts.new(post_params)
 
     if @post.save
-      redirect_to user_post_path(@user, @post), notice: 'Post was successfully created.'
+      redirect_to user_post_path(current_user, @post), notice: 'Post was successfully created.'
     else
       flash.now[:error] = 'Failed to create the post.'
       render :new
@@ -31,7 +31,9 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     @post.decrement_posts_counter
+    @post.comments.destroy_all
     @post.destroy
+    redirect_to user_posts_path(current_user), notice: 'Post was successfully destroyed.'
   end
 
   private
