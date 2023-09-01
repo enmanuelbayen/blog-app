@@ -52,9 +52,9 @@ The site was built with Ruby on Rails and PostgreSQL
 
 ### Key Features <a name="key-features"></a>
 
-- Database
-- Ror linters
-- Migration
+- Registration and sign up for users
+- Create and eliminate posts
+- see, like and comment the posts of any user
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- LIVE DEMO -->
@@ -84,7 +84,6 @@ Clone this repository to your desired folder:
   git clone git@github.com:enmanuelbayen/blog-app.git
 ```
 
-
 ### Install
 
 Install this project with:
@@ -93,6 +92,11 @@ Install this project with:
   cd blog-app
 
     bundle install
+```
+Create the database by using the command
+
+```sh
+rails db:create db:migrate
 ```
 
 ### Usage
@@ -122,6 +126,11 @@ To run tests, run the following command:
 - GitHub: [@enmanuelbayen](https://github.com/enmanuelbayen)
 - Twitter: [@EJbayen](https://twitter.com/EJbayen)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/enmanuel-bayen-torres-480906128/)
+
+👤 **Juan Zorrilla**
+
+- GitHub: [@Swarzstein](https://github.com/Swarzstein)
+- LinkedIn: [Juan Zorrilla](https://www.linkedin.com/in/juan-a-zorrilla/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -154,7 +163,10 @@ If you like this project just keep an eye on the changes that I will bring over 
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-- I would like to thank to my family and God for the opportunities to always improve despite adversity, my girlfriend and friends for being there for me, and Microverse for providing a platform to achieve this goal.
+- I would like to thank to my family and God for the opportunities to always improve despite adversity, my girlfriend and friends for being there for me, and Microverse for providing a platform to achieve this goal. ~Enmanuel
+
+- I'd like to thank God for leading me to gat to Microverse and my family too
+for the support they've given me to achive my goals here. ~Juan
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

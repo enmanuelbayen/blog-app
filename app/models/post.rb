@@ -17,6 +17,10 @@ class Post < ApplicationRecord
     author.update(posts_counter: author.posts.count)
   end
 
+  def as_json(_options = {})
+    { title:, text:, id: }
+  end
+
   def recent_comments
     comments.order(created_at: :asc).limit(5)
   end

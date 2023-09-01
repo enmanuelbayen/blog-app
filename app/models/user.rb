@@ -16,6 +16,10 @@ class User < ApplicationRecord
     role == requested_role.to_s
   end
 
+  def as_json(_options = {})
+    { name:, bio:, id: }
+  end
+
   def recent_posts
     posts.order(created_at: :asc).limit(3)
   end
